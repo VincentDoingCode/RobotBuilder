@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body onload="initialize();">
+    <h1>Robot Builder</h1>
+    <h3>Instructions: Create your own robot with the buttons below.</h3>
+    <div class="empty">
+        <img id = "curImg"src="images/unknown.png" alt="">
+    </div>
+    <div class="image">
+        <img src="images/robot1.png" alt="" onclick="changeImage(this.src);">
+        <img src="images/robot2.png" alt="" onclick="changeImage(this.src);">
+        <img src="images/robot3.jpeg" alt="" onclick="changeImage(this.src);">
+        <img src="images/robot4.png" alt="" onclick="changeImage(this.src);">
+        <img src="images/robot5.png" alt="" onclick="changeImage(this.src);">
+    </div>
+    <div>
+        Power Level: <span id="powerLevel"></span>
+        <button onclick="addOne(1);" id="a">+</button>
+        <button onclick="subtractOne(1);" id ="ab">-</button>
+    </div>
+    <div>
+        Top Speed: <span id="topSpeed"></span>
+        <button onclick="addOne(2);" id="b">+</button>
+        <button onclick="subtractOne(2);" id = "bc">-</button>
+    </div>
+    <div>
+        Structural Integrity: <span id="structInt"></span>
+        <button onclick="addOne(3);" id="c">+</button>
+        <button onclick="subtractOne(3);" id="d">-</button>
+    </div>
+    <div>
+        Scanner: <span id="scan"></span>
+        <button onclick="toggle(1);" id="e">Toggle</button>
+    </div>
+    <div>
+        Defensive System: <span id="defensive"></span>
+        <button onclick="toggle(2);" id="f">Toggle</button>
+    </div>
+    <div>
+        Power Type: <span id="pT"></span>
+        <button onclick="selectPower(1);" id="g">Hydro</button>
+        <button onclick="selectPower(2);" id ="h">Nuclear</button>
+        <button onclick="selectPower(3);" id="i">Solar</button>
+    </div>
+    <div>
+        <button onclick="final();">Finalize</button>
+    </div>
+</body>
+</html>
